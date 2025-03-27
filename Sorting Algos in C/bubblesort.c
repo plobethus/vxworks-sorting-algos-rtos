@@ -12,7 +12,7 @@ void print_array(int *arr) {
 }
 
 //BUBBLESORT
-//Wikipedia contributors. (n.d.). Timsort. In Wikipedia, The Free Encyclopedia. Retrieved March 27, 2025, from https://en.wikipedia.org/wiki/Bubble_sort
+//Wikipedia contributors. (n.d.). Bubble sort. In Wikipedia, The Free Encyclopedia. Retrieved March 27, 2025, from https://en.wikipedia.org/wiki/Bubble_sort
 void bubble_sort_task() {
     int *arr = malloc(ARR_SIZE * sizeof(int));
     if (!arr) {

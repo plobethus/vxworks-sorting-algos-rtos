@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#define RUN 32 only needed in bubble sort
-#define ARR_SIZE 10
+#define ARR_SIZE 100000
 
 
 void print_array(int *arr) {
@@ -21,9 +20,10 @@ void bubble_sort_task() {
     }
 
     for (int i = 0; i < ARR_SIZE; i++) {
-        arr[i] = rand() % 10;
+        arr[i] = rand() % 1000;
     }
-    print_array(arr);
+    //print_array(arr);
+    printf("array initialized");
 
     for (int i = 0; i < ARR_SIZE - 1; i++) {
         for (int j = 0; j < ARR_SIZE - i - 1; j++) {
@@ -32,12 +32,12 @@ void bubble_sort_task() {
                 arr[j] = arr[j + 1];
                 arr[j + 1] = tmp;
             }
-            print_array(arr);
+            //print_array(arr);
         }
     }
 
     printf("Bubble sort completed.\n");
-    print_array(arr);
+    //print_array(arr);
     free(arr);
 }
 

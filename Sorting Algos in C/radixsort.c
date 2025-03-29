@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#define RUN 32 only needed in radix sort
-#define ARR_SIZE 1000 
+#define ARR_SIZE 100000 
 
 
 void print_array(int *arr) {
@@ -33,7 +32,7 @@ void count_sort(int *arr, int n, int exp) {
     for (int i = 0; i < n; i++) {
         arr[i] = output[i];
     }
-    print_array(arr);
+    //print_array(arr);
 }
 
 void radix_sort_task() {
@@ -45,21 +44,23 @@ void radix_sort_task() {
 
     for (int i = 0; i < ARR_SIZE; i++) {
         arr[i] = rand() % 1000;
-        print_array(arr);
+    
     }
+    //print_array(arr);
+    printf("array initialized");
 
     int max = arr[0];
     for (int i = 1; i < ARR_SIZE; i++) {
         if (arr[i] > max) {
             max = arr[i];
         }
-        print_array(arr);
+        //print_array(arr);
     }
 
     for (int exp = 1; max / exp > 0; exp *= 10) {
         count_sort(arr, ARR_SIZE, exp);
     }
-
+    //print_array(arr);
     printf("Radix sort completed.\n");
     free(arr);
 }

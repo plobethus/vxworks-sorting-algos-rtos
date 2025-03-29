@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define RUN 32
-#define ARR_SIZE 1000
+#define ARR_SIZE 500000
 
 
 void print_array(int *arr) {
@@ -23,7 +22,8 @@ void insertion_sort_task() {
     for (int i = 0; i < ARR_SIZE; i++) {
         arr[i] = rand() % 1000;
     }
-    print_array(arr);
+    //print_array(arr);
+    printf("array initialized");
 
     for (int i = 1; i < ARR_SIZE; i++) {
         int key = arr[i];
@@ -33,11 +33,11 @@ void insertion_sort_task() {
             j--;
         }
         arr[j + 1] = key;
-        print_array(arr);
+        //print_array(arr);
     }
 
     printf("Insertion sort completed.\n");
-    print_array(arr);
+    //print_array(arr);
     free(arr);
 }
 

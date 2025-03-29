@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define RUN 32
-#define ARR_SIZE 1000
+#define ARR_SIZE 500000
 
 
 void print_array(int *arr) {
@@ -103,9 +103,10 @@ void tim_sort_task() {
     print_array(arr);
 
     tim_sort(arr, ARR_SIZE);
+    print_array(arr);
     printf("Timsort completed.\n");
     free(arr);
-    //print_array(arr);
+    
 }
 
 int main(){
